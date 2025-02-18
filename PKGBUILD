@@ -6,7 +6,7 @@ pkgdesc="Helper files to make swayfx a better experience for us poor NVIDIA user
 arch=('any')
 url="https://github.com/meeplabsdev/swayfx-nvidia"
 license=('MIT')
-depends=('swayfx' 'vulkan-validation-layers')
+depends=('swayfx-git' 'vulkan-validation-layers')
 source=("$pkgname-$pkgver::git+$url.git#tag=$pkgver")
 md5sums=('SKIP')
 
