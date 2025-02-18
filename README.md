@@ -1,28 +1,28 @@
-# `sway-nvidia`
+# `swayfx-nvidia`
 
-Helper files to make sway a better experience for us poor NVIDIA users.
+Helper files to make swayfx a better experience for us poor NVIDIA users.
 
 ## Installation
 
 ### Dependencies
 
-`sway` and any proprietary NVIDIA driver is required (although this probably includes their new open kernel modules, I have not tested). It may also be the case that `vulkan-validation-layers` are required to use the vulkan backend.
+`swayfx` and any proprietary NVIDIA driver is required (although this probably includes their new open kernel modules, I have not tested). It may also be the case that `vulkan-validation-layers` are required to use the vulkan backend.
 
 ### AUR Installation
 
-If you're using ArchLinux, the package is available in the AUR as [`sway-nvidia`](https://aur.archlinux.org/packages/sway-nvidia).
+If you're using ArchLinux, the package is available in the AUR as [`swayfx-nvidia`](https://aur.archlinux.org/packages/swayfx-nvidia).
 
 If you want to install this on another distro, you can clone and install the files manually
 
 ### From Source
 
-Sway is still required if you're installing. This package doesn't replace sway
+SwayFX is still required if you're installing. This package doesn't replace it.
 
 ```sh
-git clone https://github.com/crispyricepc/sway-nvidia
-sudo install -Dm755 sway-nvidia/sway-nvidia.sh "/usr/local/bin/sway-nvidia"
-sudo install -Dm644 sway-nvidia/sway-nvidia.desktop "/usr/share/wayland-sessions/sway-nvidia.desktop"
-sudo install -Dm644 sway-nvidia/wlroots-env-nvidia.sh "/usr/local/share/wlroots-nvidia/wlroots-env-nvidia.sh"
+git clone https://github.com/meeplabsdev/swayfx-nvidia
+sudo install -Dm755 swayfx-nvidia/swayfx-nvidia.sh "/usr/local/bin/swayfx-nvidia"
+sudo install -Dm644 swayfx-nvidia/swayfx-nvidia.desktop "/usr/share/wayland-sessions/swayfx-nvidia.desktop"
+sudo install -Dm644 swayfx-nvidia/wlroots-env-nvidia.sh "/usr/local/share/wlroots-nvidia/wlroots-env-nvidia.sh"
 ```
 
 ## Usage
@@ -32,19 +32,13 @@ sudo install -Dm644 sway-nvidia/wlroots-env-nvidia.sh "/usr/local/share/wlroots-
 If starting from a shell, replace your `sway` command with the following:
 
 ```sh
-exec sway-nvidia
+exec swayfx-nvidia
 ```
 ### From a Display Manager
 
-If you're starting from a display manager, select `Sway (NVIDIA)` from your wayland sessions list
+If you're starting from a display manager, select `SwayFX (NVIDIA)` from your wayland sessions list
 
 ## Known Issues
-
-### Cannot take screenshots
-
-Because we're using the experimental vulkan renderer to avoid graphical issues, screen capture is not yet implemented on wlroots 0.15. The issue is being tracked [here](https://gitlab.freedesktop.org/wlroots/wlroots/-/issues/3290)
-
-That being said, anyone using `sway-git` & `wlroots-git`, this issue has been fixed in version 0.16
 
 ### glxtest for Firefox hardware acceleration fails
 
